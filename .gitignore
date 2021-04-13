@@ -1,0 +1,6 @@
+node_modules
+PracticeUnitTests/bin
+PracticeLib/bin
+PracticeLib/obj
+PracticeUnitTests/obj
+debug.log
