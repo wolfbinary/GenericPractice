@@ -1,16 +1,33 @@
 {
-   // Use IntelliSense to find out which attributes exist for C# debugging
-   // Use hover for the description of the existing attributes
-   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-   "version": "0.2.0",
-   "configurations": [
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch hello web",
+            "url": "file:///${workspaceFolder}/TypeScriptPractice/helloweb.html",
+            "webRoot": "${workspaceFolder}/TypeScriptPractice"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch TypeScript Practice",
+            "program": "${workspaceFolder}\\TypeScriptPractice\\helloworld.ts",
+            "preLaunchTask": "tsc: build - TypescriptPractice/tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/TypeScriptPractice/out/**/*.js"
+            ]
+        }
        {
-           "name": "Launch PracticeJavascript",
-           "request": "launch",
-           "type": "pwa-chrome",
-           "url": "http://localhost:5500/JavascriptPractice",
-           "webRoot": "${workspaceFolder}"
-       },
+            "name": "Launch PracticeJavascript",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:5500/JavascriptPractice",
+            "webRoot": "${workspaceFolder}"
+        },
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
